@@ -10,16 +10,27 @@
 
 </body>
 
-<script type="application/javascript" src="../lib/web3.min.js"></script>
+<script type="text/javascript" src="../lib/web3.min.js"></script>
+<script type="text/javascript" src="../lib/truffle-contract.js"></script>
 
 <script type="application/javascript">
-    if (typeof web3 !== 'undefined') {
-        web3 = new Web3(web3.currentProvider);
-    } else {
-        // set the provider you want from Web3.providers
-        web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
-        console.info(Web3);
-    }
+    window.onload = function() {
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+        } else {
+            // set the provider you want from Web3.providers
+            web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
+//            console.info(Web3);
+        }
+
+//        if (TruffleContract != null) {
+//            document.body.innerHTML = "Success!"
+//        } else {
+//            document.body.innerHTML = "FAILED!"
+//        }
+//        console.log(TruffleContract);
+    };
+
 
 
 
