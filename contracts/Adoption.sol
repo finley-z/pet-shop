@@ -4,10 +4,12 @@ contract Adoption {
 
   address[16] public adopters;  // 保存领养者的地址
 
+   event Deposit(address indexed _from, uint petid);
+
     // 领养宠物
   function adopt(uint petId) public returns (uint) {
     require(petId >= 0 && petId <= 15);  // 确保id在数组长度内
-
+    Deposit(msg.sender,petId);
     adopters[petId] = msg.sender;        // 保存调用这地址
     return petId;
   }
