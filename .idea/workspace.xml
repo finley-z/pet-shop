@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="f2a31bd3-ae24-471b-bbf0-cd00626b83c5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/contracts/Adoption.json" afterPath="$PROJECT_DIR$/build/contracts/Adoption.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/Adoption.sol" afterPath="$PROJECT_DIR$/contracts/Adoption.sol" />
     </list>
+=======
+<<<<<<< HEAD
+    <list default="true" id="b60beca0-5c98-4019-8f31-6b42c08b5a5d" name="Default" comment="" />
+=======
+    <list default="true" id="f2a31bd3-ae24-471b-bbf0-cd00626b83c5" name="Default" comment="" />
+>>>>>>> 03f8b84703df4bd6fa6532f2ed5d158bf727e6a8
+>>>>>>> 0243f23b18af6c39334b6feff2dfaf89de4628ee
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +138,31 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="/usr/local/apache-maven" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+=======
   <component name="ProjectFrameBounds" extendedState="6">
+>>>>>>> 03f8b84703df4bd6fa6532f2ed5d158bf727e6a8
     <option name="x" value="67" />
     <option name="y" value="23" />
     <option name="width" value="1373" />
@@ -320,12 +352,25 @@
       <created>1523256019897</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
+      <updated>1523086161145</updated>
+      <workItem from="1523086164778" duration="3494000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3494000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="23" width="1373" height="877" extended-state="1" />
+=======
       <updated>1523256019897</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+>>>>>>> 03f8b84703df4bd6fa6532f2ed5d158bf727e6a8
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
