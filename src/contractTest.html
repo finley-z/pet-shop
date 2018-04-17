@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+        } else {
+            // set the provider you want from Web3.providers
+            web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+        }
+
+        var abi = [
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "name": "firstParty",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "secondParty",
+                        "type": "address"
+                    }
+                ],
+                "name": "Save",
+                "type": "event"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "firstParty",
+                        "type": "address"
+                    },
+                    {
+                        "name": "secondParty",
+                        "type": "address"
+                    },
+                    {
+                        "name": "userId",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "shareProfit",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "expireYear",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "signContract",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "signParty",
+                        "type": "address"
+                    }
+                ],
+                "name": "getContract",
+                "outputs": [
+                    {
+                        "name": "firstParty",
+                        "type": "address"
+                    },
+                    {
+                        "name": "secondParty",
+                        "type": "address"
+                    },
+                    {
+                        "name": "userId",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "shareProfit",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "expireYear",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            }
+        ];
+
+//        console.info(web3.eth.accounts);
+
+        var BusinessContract = web3.eth.contract(abi);
+        var BusinessContract = BusinessContract.at("0xf03fcee2b92e3590215d2c38bd366e81b3454a95");
+
+        var tx=BusinessContract.signContract("0xDB9aB489ed6b547121DC179C901D0F83d21e3692","0x38f67949eEB18Ed1A5CF01B4E2f0296afD4e956C",1,5,2, {from: "0xDB9aB489ed6b547121DC179C901D0F83d21e3692"});
+        console.log("交易哈希:"+tx);
+        var event = BusinessContract.Save();
+        event.watch(function(error, result) {
+            if (!error){
+                console.log("合约调用结果:"+result);
+            }else{
+                console.log("合约调用错误，原因:"+error);
+            }
+        });
+
+
+        var result = BusinessContract.getContract.call("0xDB9aB489ed6b547121DC179C901D0F83d21e3692");
+        console.log("合约签署内容:"+result);
+    }
+</script>
+</body>
+</html>

@@ -13,137 +13,122 @@
 <script src="js/web3.min.js"></script>
 <script src="js/truffle-contract.js"></script>
 <script type="text/javascript">
-    window.onload=function(){
+    window.onload = function () {
         if (typeof web3 !== 'undefined') {
-          web3 = new Web3(web3.currentProvider);
+            web3 = new Web3(web3.currentProvider);
         } else {
-          // set the provider you want from Web3.providers
-          web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+            // set the provider you want from Web3.providers
+            web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
         }
 
         var abi = [
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "adopters",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "name": "_from",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "name": "petid",
-          "type": "uint256"
-        }
-      ],
-      "name": "Deposit",
-      "type": "event"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "petId",
-          "type": "uint256"
-        }
-      ],
-      "name": "adopt",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getAdopters",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address[16]"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    }
-  ];
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "adopters",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "name": "_from",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "petid",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "Deposit",
+                "type": "event"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "petId",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "adopt",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getAdopters",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "address[16]"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ];
 
         <!--console.info(web3.eth.accounts);-->
-        <!---->
-        <!---->
+
         var Adoption = web3.eth.contract(abi);
-        var AdoptionReceipt = Adoption.at("0xd089a80872e1829b5b196fd7d372f3b2eb4bdff4");
-        var petid = AdoptionReceipt.adopt(1, {from: "0x6cab76c61c9d5d5a6bdde1054379cb0ec483a228"});
-        console.info("petid:"+petid);
+        var AdoptionReceipt = Adoption.at("0xDB9aB489ed6b547121DC179C901D0F83d21e3692");
+        var petid = AdoptionReceipt.adopt(2, {from: "0x38f67949eEB18Ed1A5CF01B4E2f0296afD4e956C"});
+        console.info("petid:" + petid);
 
         <!--var result = AdoptionReceipt.getAdopters();-->
         <!--console.log("result:"+result)-->
 
-        <!--var event = AdoptionReceipt.Deposit();-->
-        <!--// watch for changes-->
-        <!--event.watch(function(error, result){-->
-            <!--// result will contain various information-->
-            <!--// including the argumets given to the Deposit-->
-            <!--// call.-->
-            <!--if (!error)-->
-                <!--console.log(result);-->
-        <!--});-->
 
-        <!--// Or pass a callback to start watching immediately-->
-        <!--var event = AdoptionReceipt.Deposit(function(error, result) {-->
-            <!--if (!error)-->
-                <!--console.log(result);-->
-        <!--});-->
-           var abi1 = [
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "addr",
-          "type": "address"
-        }
-      ],
-      "name": "getBalance",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    }
-  ];
+        var abi1 = [
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "name": "addr",
+                        "type": "address"
+                    }
+                ],
+                "name": "getBalance",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ];
         var AddressTest = web3.eth.contract(abi1);
         var AddressTestInstance = AddressTest.at("0x1bbec06700659254324f45dcdd1f01c570094eb6");
         var ethBalance = AddressTestInstance.getBalance("0x6cab76c61c9d5d5a6bdde1054379cb0ec483a228");
-        console.info("ethBalance:"+ethBalance);
+        console.info("ethBalance:" + ethBalance);
 
     }
 </script>
