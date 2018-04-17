@@ -23,11 +23,8 @@ contract BusinessContract {
 
     //签署合约
     function signContract(address firstParty,address secondParty,uint userId,uint shareProfit,uint expireYear) public{
-        contents[msg.sender].firstParty=firstParty;
-        contents[msg.sender].secondParty=secondParty;
-        contents[msg.sender].userId=userId;
-        contents[msg.sender].shareProfit=shareProfit;
-        contents[msg.sender].expireYear=expireYear;
+        Content con=Content(firstParty,secondParty,userId,shareProfit,expireYear);
+        contents[msg.sender]=con;
         Save(msg.sender,secondParty);
     }
 
