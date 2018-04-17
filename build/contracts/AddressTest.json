@@ -21,14 +21,14 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b60db8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063f8b2cb4f146044575b600080fd5b3415604e57600080fd5b6078600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050608e565b6040518082815260200191505060405180910390f35b60008173ffffffffffffffffffffffffffffffffffffffff163190509190505600a165627a7a72305820e452c08afb61e5492a1465dc4d6be8f4967c405a3ca59a4b1d7800e3a3247c200029",
-  "deployedBytecode": "0x606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063f8b2cb4f146044575b600080fd5b3415604e57600080fd5b6078600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050608e565b6040518082815260200191505060405180910390f35b60008173ffffffffffffffffffffffffffffffffffffffff163190509190505600a165627a7a72305820e452c08afb61e5492a1465dc4d6be8f4967c405a3ca59a4b1d7800e3a3247c200029",
-  "sourceMap": "27:132:0:-;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "27:132:0:-;;;;;;;;;;;;;;;;;;;;;;;;56:98;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;111:4;134;:12;;;127:19;;56:98;;;:::o",
-  "source": "pragma solidity ^0.4.0;\r\n\r\ncontract AddressTest{\r\n\r\n    function getBalance(address addr) public view returns (uint){\r\n        return addr.balance;\r\n    }\r\n\r\n}",
-  "sourcePath": "D:\\dapps\\pet-shop\\contracts\\AddressTest.sol",
+  "bytecode": "0x6060604052341561000f57600080fd5b60db8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063f8b2cb4f146044575b600080fd5b3415604e57600080fd5b6078600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050608e565b6040518082815260200191505060405180910390f35b60008173ffffffffffffffffffffffffffffffffffffffff163190509190505600a165627a7a72305820bc2e8eb6fcd7a2a831ce482906832456b53eb54692da857a8efee023c560c4090029",
+  "deployedBytecode": "0x606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063f8b2cb4f146044575b600080fd5b3415604e57600080fd5b6078600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050608e565b6040518082815260200191505060405180910390f35b60008173ffffffffffffffffffffffffffffffffffffffff163190509190505600a165627a7a72305820bc2e8eb6fcd7a2a831ce482906832456b53eb54692da857a8efee023c560c4090029",
+  "sourceMap": "25:126:0:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "25:126:0:-;;;;;;;;;;;;;;;;;;;;;;;;52:96;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;107:4;129;:12;;;122:19;;52:96;;;:::o",
+  "source": "pragma solidity ^0.4.0;\n\ncontract AddressTest{\n\n    function getBalance(address addr) public view returns (uint){\n        return addr.balance;\n    }\n\n}",
+  "sourcePath": "/Users/finley/Documents/blockchain/dapp/pet-shop/contracts/AddressTest.sol",
   "ast": {
-    "absolutePath": "/D/dapps/pet-shop/contracts/AddressTest.sol",
+    "absolutePath": "/Users/finley/Documents/blockchain/dapp/pet-shop/contracts/AddressTest.sol",
     "exportedSymbols": {
       "AddressTest": [
         13
@@ -65,7 +65,7 @@
             "body": {
               "id": 11,
               "nodeType": "Block",
-              "src": "116:38:0",
+              "src": "112:36:0",
               "statements": [
                 {
                   "expression": {
@@ -77,7 +77,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3,
-                      "src": "134:4:0",
+                      "src": "129:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -91,7 +91,7 @@
                     "memberName": "balance",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": null,
-                    "src": "134:12:0",
+                    "src": "129:12:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -100,7 +100,7 @@
                   "functionReturnParameters": 7,
                   "id": 10,
                   "nodeType": "Return",
-                  "src": "127:19:0"
+                  "src": "122:19:0"
                 }
               ]
             },
@@ -122,7 +122,7 @@
                   "name": "addr",
                   "nodeType": "VariableDeclaration",
                   "scope": 12,
-                  "src": "76:12:0",
+                  "src": "72:12:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -133,7 +133,7 @@
                     "id": 2,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "76:7:0",
+                    "src": "72:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -143,7 +143,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "75:14:0"
+              "src": "71:14:0"
             },
             "payable": false,
             "returnParameters": {
@@ -156,7 +156,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 12,
-                  "src": "111:4:0",
+                  "src": "107:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -167,7 +167,7 @@
                     "id": 5,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "111:4:0",
+                    "src": "107:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -177,23 +177,23 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "110:6:0"
+              "src": "106:6:0"
             },
             "scope": 13,
-            "src": "56:98:0",
+            "src": "52:96:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 14,
-        "src": "27:132:0"
+        "src": "25:126:0"
       }
     ],
-    "src": "0:159:0"
+    "src": "0:151:0"
   },
   "legacyAST": {
-    "absolutePath": "/D/dapps/pet-shop/contracts/AddressTest.sol",
+    "absolutePath": "/Users/finley/Documents/blockchain/dapp/pet-shop/contracts/AddressTest.sol",
     "exportedSymbols": {
       "AddressTest": [
         13
@@ -230,7 +230,7 @@
             "body": {
               "id": 11,
               "nodeType": "Block",
-              "src": "116:38:0",
+              "src": "112:36:0",
               "statements": [
                 {
                   "expression": {
@@ -242,7 +242,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3,
-                      "src": "134:4:0",
+                      "src": "129:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -256,7 +256,7 @@
                     "memberName": "balance",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": null,
-                    "src": "134:12:0",
+                    "src": "129:12:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -265,7 +265,7 @@
                   "functionReturnParameters": 7,
                   "id": 10,
                   "nodeType": "Return",
-                  "src": "127:19:0"
+                  "src": "122:19:0"
                 }
               ]
             },
@@ -287,7 +287,7 @@
                   "name": "addr",
                   "nodeType": "VariableDeclaration",
                   "scope": 12,
-                  "src": "76:12:0",
+                  "src": "72:12:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -298,7 +298,7 @@
                     "id": 2,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "76:7:0",
+                    "src": "72:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -308,7 +308,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "75:14:0"
+              "src": "71:14:0"
             },
             "payable": false,
             "returnParameters": {
@@ -321,7 +321,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 12,
-                  "src": "111:4:0",
+                  "src": "107:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -332,7 +332,7 @@
                     "id": 5,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "111:4:0",
+                    "src": "107:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -342,20 +342,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "110:6:0"
+              "src": "106:6:0"
             },
             "scope": 13,
-            "src": "56:98:0",
+            "src": "52:96:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 14,
-        "src": "27:132:0"
+        "src": "25:126:0"
       }
     ],
-    "src": "0:159:0"
+    "src": "0:151:0"
   },
   "compiler": {
     "name": "solc",
@@ -370,5 +370,9 @@
     }
   },
   "schemaVersion": "2.0.0",
+<<<<<<< HEAD
   "updatedAt": "2018-04-17T08:46:32.886Z"
+=======
+  "updatedAt": "2018-04-13T03:53:54.532Z"
+>>>>>>> d3c73bfd65f6c60f6a92f4ae5f4556c2f7fa9787
 }
