@@ -7,7 +7,9 @@
 <body>
 <script src="js/web3.min.js"></script>
 <script src="js/truffle-contract.js"></script>
+<script src="TTVIP.js"></script>
 <script type="text/javascript">
+<<<<<<< HEAD
     window.onload = function () {
         if (typeof web3 !== 'undefined') {
             web3 = new Web3(web3.currentProvider);
@@ -196,6 +198,19 @@
         var result1 = BusinessContract.getAdopters.call();
         console.log("地址记录:"+result1);
     }
+=======
+//    window.onload = function () {
+//        var tx=TTVIP.test();
+//        var from = "0x3b44fc7839a68a7773bd3dfbe9c71f3b06517318";
+//        var tx=getTransactions(from);
+//        var tx=getContracts(from);
+//        var tx=getAccountInfo(from);
+//        var tx =signContract(from,"0xf96679550736c9a5c6284709ca166c9497a3cf98", 15,3, "test signContract");
+//        var tx =transform(from,"0xf96679550736c9a5c6284709ca166c9497a3cf98", 1888, "test transform");
+//        var tx =addFund(from,"0x3b44fc7839a68a7773bd3dfbe9c71f3b06517318", 1999, "test addfund");
+//        console.log("res:" + tx);
+//    }
+>>>>>>> ad53aeba55ccdbeafdbc5544f125fd78a33a7228
 </script>
 </body>
 </html>
