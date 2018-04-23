@@ -16,7 +16,65 @@
             web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
         }
 
-        var abi = [
+        var abi =[
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "adopters",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "name": "contents",
+                "outputs": [
+                    {
+                        "name": "firstParty",
+                        "type": "address"
+                    },
+                    {
+                        "name": "secondParty",
+                        "type": "address"
+                    },
+                    {
+                        "name": "userId",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "shareProfit",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "expireYear",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "txHash",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
             {
                 "anonymous": false,
                 "inputs": [
@@ -65,7 +123,7 @@
                 "type": "function"
             },
             {
-                "constant": false,
+                "constant": true,
                 "inputs": [
                     {
                         "name": "signParty",
@@ -96,7 +154,21 @@
                     }
                 ],
                 "payable": false,
-                "stateMutability": "nonpayable",
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getAdopters",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "address[16]"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
                 "type": "function"
             }
         ];
@@ -109,7 +181,8 @@
         var tx=BusinessContract.signContract("0xDB9aB489ed6b547121DC179C901D0F83d21e3692","0x38f67949eEB18Ed1A5CF01B4E2f0296afD4e956C",1,5,2, {from: "0xDB9aB489ed6b547121DC179C901D0F83d21e3692"});
         console.log("交易哈希:"+tx);
         var event = BusinessContract.Save();
-        event.watch(function(error, result) {
+
+        event.watch(function(error, result){
             if (!error){
                 console.log("合约调用结果:"+result);
             }else{
@@ -117,9 +190,11 @@
             }
         });
 
-
-        var result = BusinessContract.getContract.call("0xDB9aB489ed6b547121DC179C901D0F83d21e3692");
+        var result = BusinessContract.getContract.call("0x38f67949eEB18Ed1A5CF01B4E2f0296afD4e956C");
         console.log("合约签署内容:"+result);
+
+        var result1 = BusinessContract.getAdopters.call();
+        console.log("地址记录:"+result1);
     }
 </script>
 </body>
